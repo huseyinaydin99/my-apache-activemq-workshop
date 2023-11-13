@@ -1,0 +1,34 @@
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<!-- Default Page -->
+	<definition name="page-default" template="/WEB-INF/jsp/layout.jsp">
+		<put-attribute name="title" value="Hello" type="string" />
+		<put-attribute name="body" value="[BODY]" />
+	</definition>
+	
+	<definition name="page-home" extends="page-default">
+		<put-attribute name="title" type="string" value="Home"/>
+		<put-attribute name="body" value="/WEB-INF/jsp/body-home.jsp"/>
+	</definition>
+	
+	<definition name="page-login" template="/WEB-INF/jsp/login.jsp">
+	</definition>
+	
+	<definition name="page-products" extends="page-default">
+		<put-attribute name="title" type="string" value="Products"/>
+		<put-attribute name="body" value="/WEB-INF/jsp/body-products.jsp"/>
+	</definition>
+	
+	<definition name="page-view-product" extends="page-default">
+		<put-attribute name="title" type="string" value="Products"/>
+		<put-attribute name="body" value="/WEB-INF/jsp/body-view-product.jsp"/>
+	</definition>
+	
+	<definition name="page-view-success" extends="page-default">
+		<put-attribute name="title" type="string" value="Products"/>
+		<put-attribute name="body" value="/WEB-INF/jsp/body-success.jsp"/>
+	</definition>
+</tiles-definitions>
